@@ -73,7 +73,7 @@ const findProductById = async (req, res, next) => {
   }
 };
 
-const UpdateProduct = async (req, res, next) => {
+const updateProduct = async (req, res, next) => {
   const { name, price, stock } = req.body;
   try {
     const product = await Product.update(
@@ -130,6 +130,6 @@ module.exports = {
   createProduct,
   findProducts,
   findProductById,
-  UpdateProduct,
+  updateProduct,
   deleteProduct,
 };
